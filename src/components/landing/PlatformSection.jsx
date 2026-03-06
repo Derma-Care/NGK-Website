@@ -99,7 +99,7 @@ City: ${formData.city}
                 <a href="#download"
                   className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full text-white font-semibold text-sm shadow-lg hover:scale-105 transition-transform duration-300"
                   style={{ background: "linear-gradient(135deg, #d63384, #e91e8c)" }}>
-                  📱 Download the App
+                  📱 Coming Soon
                 </a>
               </div>
             </div>

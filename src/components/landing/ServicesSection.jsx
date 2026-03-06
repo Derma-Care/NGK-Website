@@ -144,7 +144,7 @@ export default function ServicesSection() {
                 {/* Footer */}
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                   <span className="text-green-600 font-bold text-base">
-                    {clinic.discount}
+                    {/* {clinic.discount} */}
                   </span>
 
                   <button

@@ -46,7 +46,7 @@ export default function Navbar() {
               <a href="#book-demo"
                 className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-white font-semibold text-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(214,51,132,0.35)]"
                 style={{ background: "linear-gradient(135deg, #c2185b, #d63384)" }}>
-                Book Demo
+                Book Demo for Clinic WA
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -79,7 +79,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}
                 className="mt-6 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-white font-bold text-lg"
                 style={{ background: "linear-gradient(135deg, #c2185b, #d63384)" }}>
-                Book Demo <ArrowRight className="w-5 h-5" />
+                Book Demo for Clinic WA <ArrowRight className="w-5 h-5" />
               </motion.a>
             </div>
           </motion.div>
