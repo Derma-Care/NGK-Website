@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Browser Tab Logo (Favicon) -->
+    <link rel="icon" type="image/png" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69aa62473c1e728438c409e6/337abdec9_NGKLogo_Y1.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>NGK Website</title>
+    <script type="module" crossorigin src="/assets/index-CkP-r1dP.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-uhcanp_t.css">
+    <script type="module">
+let lastPath = "";
+function getPageNameFromPath(path) {
+  const segments = path.split("/").filter(Boolean);
+  return segments[0] || null;
+}
+function trackPageView() {
+  const path = window.location.pathname;
+  if (path === lastPath) return;
+  lastPath = path;
+  const pageName = getPageNameFromPath(path) || "home";
+  const appId = "";
+  const serverUrl = "" || "";
+  if (!appId) return;
+  fetch(`${serverUrl}/app-logs/${appId}/log-user-in-app/${pageName}`, {
+    method: "POST",
+  }).catch(() => {});
+}
+const originalPushState = history.pushState.bind(history);
+history.pushState = function (...args) {
+  originalPushState(...args);
+  trackPageView();
+};
+const originalReplaceState = history.replaceState.bind(history);
+history.replaceState = function (...args) {
+  originalReplaceState(...args);
+  trackPageView();
+};
+window.addEventListener("popstate", trackPageView);
+trackPageView();
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
