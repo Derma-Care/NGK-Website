@@ -8,7 +8,7 @@ const pillars = [
   {
     icon: BadgeCheck,
     title: "Verified Clinics Only",
-    description: "Every clinic on NGK is medically verified, licensed, and background-checked. No unqualified providers, ever.",
+    description: "Every clinic on NGK is verified, licensed, and background-checked. No unqualified providers, ever.",
     iconColor: "text-green-600",
     bg: "bg-green-50",
   },
@@ -63,7 +63,7 @@ export default function AboutSection() {
             <div className="mt-8 flex flex-wrap gap-3">
               <span className="bg-pink-100 text-pink-700 text-sm font-semibold px-4 py-2 rounded-full">For Patients</span>
               <span className="bg-green-100 text-green-700 text-sm font-semibold px-4 py-2 rounded-full">For Clinics</span>
-              <span className="bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-2 rounded-full">100% Verified</span>
+              <span className="bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-2 rounded-full">Verified</span>
               <span className="bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-2 rounded-full">Best Discounts</span>
             </div>
           </motion.div>

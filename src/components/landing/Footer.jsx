@@ -11,7 +11,7 @@ const footerLinks = {
     { label: "For Clinics", href: "#platform" },
     { label: "Clinics", href: "#clinics" },
   ],
-  Company: [
+  Products: [
     { label: "About NGK", href: "#about" },
     { label: "Partner With Us", href: "mailto:ngkderma@gmail.com" },
     { label: "Careers", href: "#" },
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Platform + Company Links */}
+          {/* Platform + Products Links */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="font-semibold text-white mb-6">{title}</h4>

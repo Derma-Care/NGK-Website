@@ -10,30 +10,74 @@ export default function CTASection() {
     name: "",
     clinic: "",
     phone: "",
+    date: "",
+    time: "",
     city: ""
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const sendWhatsApp = (e) => {
+const formatTimeTo12Hour = (time) => {
+  const [hour, minute] = time.split(":");
+  let h = parseInt(hour);
+  const ampm = h >= 12 ? "PM" : "AM";
+  h = h % 12;
+  h = h ? h : 12;
+  return `${h}:${minute} ${ampm}`;
+};
+   const sendWhatsApp = (e) => {
     e.preventDefault();
-
+ const formattedTime = formatTimeTo12Hour(formData.time);
     const message = `
-Hello NGK Team,
+Hello NGK Team 👋
 
-Clinic Partnership Request
+━━━━━━━━━━━━━━━━━━━━━━
+📌 *CLINIC PARTNERSHIP REQUEST*
+━━━━━━━━━━━━━━━━━━━━━━
 
+👤 *Contact Person*
 Name: ${formData.name}
+
+🏥 *Clinic Information*
 Clinic Name: ${formData.clinic}
-Phone: ${formData.phone}
-City: ${formData.city}
-    `;
+City / Location: ${formData.city}
+
+📞 *Contact Details*
+Phone Number: ${formData.phone}
+
+━━━━━━━━━━━━━━━━━━━━━━
+📅 *Preferred Demo Schedule*
+━━━━━━━━━━━━━━━━━━━━━━
+
+Preferred Date: ${formData.date}
+Preferred Time: ${formattedTime}
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+I am interested in partnering with *NGK (Neeha's Glow Kart)* and would like to see a demo of the platform.
+
+Please share the demo meeting details and guide us through the onboarding process.
+
+Looking forward to collaborating with NGK.
+
+Thank you 😊
+`;
 
     const url = `https://wa.me/918688767603?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
+
+    setFormData({
+      name: "",
+      clinic: "",
+      phone: "",
+      city: "",
+      date: "",
+      time: ""
+    });
+
+    setOpenForm(false);
   };
 
   return (
@@ -70,7 +114,7 @@ City: ${formData.city}
             </p>
 
             <button className="px-6 py-3 rounded-full bg-white text-pink-600 font-bold">
-              📱 Coming Soon
+              📱 Download App
             </button>
           </div>
 
@@ -151,7 +195,23 @@ City: ${formData.city}
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
               />
-
+              <input
+                type="date"
+                name="date"
+                required
+                min={new Date().toISOString().split("T")[0]}
+                value={formData.date}
+                onChange={handleChange}
+                className="w-full border p-3 rounded-lg"
+              />
+               <input
+                  type="time"
+                  name="time"
+                  value={formData.time}
+                  onChange={handleChange}
+                  className="w-full border p-2 rounded"
+                  required
+                />
               <input
                 type="text"
                 name="city"

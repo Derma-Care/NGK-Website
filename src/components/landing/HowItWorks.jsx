@@ -7,7 +7,7 @@ const steps = [
     step: "01",
     icon: Search,
     title: "Search Verified Clinics",
-    description: "Browse NGK-certified dermatology clinics near you. All clinics are background-checked and medically verified.",
+    description: "Browse NGK-certified dermatology clinics near you. All clinics are background-checked and verified.",
     color: "from-pink-500 to-rose-500",
     bg: "bg-pink-50",
   },
