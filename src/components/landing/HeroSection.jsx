@@ -122,14 +122,14 @@ Thank you 😊
 
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
                 className="mt-6 text-lg sm:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                NGK connects you to <strong className="text-green-700">verified clinics</strong> for skin procedures — with guaranteed discounts, genuine reviews, and seamless appointment booking from your phone.
+                NGK connects you to <strong className="text-green-700">verified clinics</strong> for skin procedures — with discounts, genuine reviews, and seamless appointment booking from your phone.
               </motion.p>
 
               {/* Bullets */}
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65 }}
                 className="mt-6 flex flex-col gap-2 items-center lg:items-start">
                 {[
-                  "100% Verified Clinics",
+                  "Verified Clinics",
                   "Exclusive Discounts on Skin Procedures",
                   "Easy App Booking – Anytime, Anywhere",
                 ].map((item) => (
@@ -263,7 +263,7 @@ Thank you 😊
             </button>
 
             <h3 className="text-xl font-bold mb-6 text-center">
-              Book a Demo
+             Book a Free Clinic Demo
             </h3>
 
             <form onSubmit={sendWhatsApp} className="space-y-4">
@@ -297,40 +297,6 @@ Thank you 😊
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
               />
-
-              <input
-                type="date"
-                name="date"
-                min={new Date().toISOString().split("T")[0]}
-                required
-                value={formData.date}
-                onChange={handleChange}
-                className="w-full border p-3 rounded-lg"
-              />
-              <select
-                name="time"
-                required
-                value={formData.time}
-                onChange={handleChange}
-                className="w-full border p-3 rounded-lg"
-              >
-                <option value="">Select Preferred Time</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="01:00 PM">01:00 PM</option>
-                <option value="02:00 PM">02:00 PM</option>
-                <option value="03:00 PM">03:00 PM</option>
-                <option value="04:00 PM">04:00 PM</option>
-                <option value="05:00 PM">05:00 PM</option>
-                <option value="06:00 PM">06:00 PM</option>
-                <option value="07:00 PM">07:00 PM</option>
-                <option value="08:00 PM">08:00 PM</option>
-                <option value="09:00 PM">09:00 PM</option>
-                <option value="10:00 PM">10:00 PM</option>
-                <option value="11:00 PM">11:00 PM</option>
-              </select>
-
               <input
                 type="text"
                 name="city"
@@ -340,6 +306,25 @@ Thank you 😊
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
               />
+              <input
+                type="date"
+                name="date"
+                min={new Date().toISOString().split("T")[0]}
+                required
+                value={formData.date}
+                onChange={handleChange}
+                className="w-full border p-3 rounded-lg"
+              />
+              <input
+                type="time"
+                name="time"
+                value={formData.time}
+                onChange={handleChange}
+                className="w-full border p-2 rounded"
+                required
+              />
+
+            
 
               <button
                 type="submit"

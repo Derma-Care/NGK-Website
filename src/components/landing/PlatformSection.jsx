@@ -210,7 +210,7 @@ Thank you 😊
                 type="text"
                 name="name"
                 required
-                placeholder="Your Name"
+                placeholder="Full Name"
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
               />
@@ -219,7 +219,7 @@ Thank you 😊
                 type="text"
                 name="clinic"
                 required
-                placeholder="Clinic Name"
+                placeholder="Clinic / Company Name"
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
               />
@@ -229,6 +229,14 @@ Thank you 😊
                 name="phone"
                 required
                 placeholder="Phone Number"
+                onChange={handleChange}
+                className="w-full border p-3 rounded-lg"
+              />
+                 <input
+                type="text"
+                name="city"
+                required
+                placeholder="City"
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
               />
@@ -249,14 +257,7 @@ Thank you 😊
                   className="w-full border p-2 rounded"
                   required
                 />
-              <input
-                type="text"
-                name="city"
-                required
-                placeholder="City"
-                onChange={handleChange}
-                className="w-full border p-3 rounded-lg"
-              />
+           
 
               <button
                 type="submit"

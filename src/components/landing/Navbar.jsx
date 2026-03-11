@@ -194,7 +194,7 @@ Thank you 😊
                 <input
                   type="text"
                   name="name"
-                  placeholder="Your Name"
+                  placeholder="Full Name"
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full border p-2 rounded"
@@ -204,7 +204,7 @@ Thank you 😊
                 <input
                   type="text"
                   name="clinic"
-                  placeholder="Clinic Name"
+                  placeholder="Clinic / Company Name"
                   value={formData.clinic}
                   onChange={handleChange}
                   className="w-full border p-2 rounded"
