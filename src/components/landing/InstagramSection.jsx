@@ -20,7 +20,7 @@ export default function InstagramSection() {
           className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white rounded-full px-4 py-2 mb-6">
             <Instagram className="w-4 h-4" />
-            <span className="text-sm font-semibold">@ngkderma</span>
+            <span className="text-sm font-semibold">ngkderma</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900" style={{ fontFamily: "'Georgia', serif" }}>
             Real Glow

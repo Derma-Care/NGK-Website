@@ -18,17 +18,17 @@ export default function CTASection() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-const formatTimeTo12Hour = (time) => {
-  const [hour, minute] = time.split(":");
-  let h = parseInt(hour);
-  const ampm = h >= 12 ? "PM" : "AM";
-  h = h % 12;
-  h = h ? h : 12;
-  return `${h}:${minute} ${ampm}`;
-};
-   const sendWhatsApp = (e) => {
+  const formatTimeTo12Hour = (time) => {
+    const [hour, minute] = time.split(":");
+    let h = parseInt(hour);
+    const ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12;
+    h = h ? h : 12;
+    return `${h}:${minute} ${ampm}`;
+  };
+  const sendWhatsApp = (e) => {
     e.preventDefault();
- const formattedTime = formatTimeTo12Hour(formData.time);
+    const formattedTime = formatTimeTo12Hour(formData.time);
     const message = `
 Hello NGK Team 👋
 
@@ -195,7 +195,7 @@ Thank you 😊
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
               />
-               <input
+              <input
                 type="text"
                 name="city"
                 required
@@ -204,23 +204,35 @@ Thank you 😊
                 className="w-full border p-3 rounded-lg"
               />
               <input
-                type="date"
+                type="text"
                 name="date"
-                required
-                min={new Date().toISOString().split("T")[0]}
+                placeholder="Preferred Date for Demo"
+                onFocus={(e) => {
+                  e.target.type = "date";
+                  e.target.min = new Date().toISOString().split("T")[0];
+                }}
+                onBlur={(e) => {
+                  if (!e.target.value) e.target.type = "text";
+                }}
                 value={formData.date}
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
+                required
               />
-               <input
-                  type="time"
-                  name="time"
-                  value={formData.time}
-                  onChange={handleChange}
-                  className="w-full border p-2 rounded"
-                  required
-                />
-             
+              <input
+                type="text"
+                name="time"
+                placeholder="Preferred Time for Demo"
+                onFocus={(e) => (e.target.type = "time")}
+                onBlur={(e) => {
+                  if (!e.target.value) e.target.type = "text";
+                }}
+                value={formData.time}
+                onChange={handleChange}
+                className="w-full border p-3 rounded-lg"
+                required
+              />
+
 
               <button
                 type="submit"

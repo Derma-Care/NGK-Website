@@ -18,8 +18,8 @@ export default function Home() {
       <HeroSection />
       <HowItWorks />
       <AboutSection />
-      <ServicesSection />
       <PlatformSection />
+      <ServicesSection />
       <TestimonialsSection />
       <InstagramSection />
       <CTASection />

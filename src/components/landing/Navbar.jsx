@@ -8,8 +8,9 @@ const LOGO_URL =
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+    { label: "Users & Clinics", href: "#platform" },
   { label: "Clinics", href: "#clinics" },
-  { label: "Users & Clinics", href: "#platform" },
+
   { label: "Contact", href: "#contact" },
 ];
 
@@ -231,24 +232,35 @@ Thank you 😊
                   required
                 />
 
-                <input
-                  type="date"
-                  name="date"
-                  min={new Date().toISOString().split("T")[0]}
-                  value={formData.date}
-                  onChange={handleChange}
-                  className="w-full border p-2 rounded"
-                  required
-                />
-
-                <input
-                  type="time"
-                  name="time"
-                  value={formData.time}
-                  onChange={handleChange}
-                  className="w-full border p-2 rounded"
-                  required
-                />
+                  <input
+                type="text"
+                name="date"
+                placeholder="Preferred Date for Demo"
+                onFocus={(e) => {
+                  e.target.type = "date";
+                  e.target.min = new Date().toISOString().split("T")[0];
+                }}
+                onBlur={(e) => {
+                  if (!e.target.value) e.target.type = "text";
+                }}
+                value={formData.date}
+                onChange={handleChange}
+                className="w-full border p-3 rounded-lg"
+                required
+              />
+              <input
+                type="text"
+                name="time"
+                placeholder="Preferred Time for Demo"
+                onFocus={(e) => (e.target.type = "time")}
+                onBlur={(e) => {
+                  if (!e.target.value) e.target.type = "text";
+                }}
+                value={formData.time}
+                onChange={handleChange}
+                className="w-full border p-3 rounded-lg"
+                required
+              />
 
                 <button
                   type="submit"

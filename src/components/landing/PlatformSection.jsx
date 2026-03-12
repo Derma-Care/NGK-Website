@@ -240,25 +240,35 @@ Thank you 😊
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
               />
-              <input
-                type="date"
+                <input
+                type="text"
                 name="date"
-                required
-                min={new Date().toISOString().split("T")[0]}
+                placeholder="Preferred Date for Demo"
+                onFocus={(e) => {
+                  e.target.type = "date";
+                  e.target.min = new Date().toISOString().split("T")[0];
+                }}
+                onBlur={(e) => {
+                  if (!e.target.value) e.target.type = "text";
+                }}
                 value={formData.date}
                 onChange={handleChange}
                 className="w-full border p-3 rounded-lg"
+                required
               />
-                 <input
-                  type="time"
-                  name="time"
-                  value={formData.time}
-                  onChange={handleChange}
-                  className="w-full border p-2 rounded"
-                  required
-                />
-           
-
+              <input
+                type="text"
+                name="time"
+                placeholder="Preferred Time for Demo"
+                onFocus={(e) => (e.target.type = "time")}
+                onBlur={(e) => {
+                  if (!e.target.value) e.target.type = "text";
+                }}
+                value={formData.time}
+                onChange={handleChange}
+                className="w-full border p-3 rounded-lg"
+                required
+              />
               <button
                 type="submit"
                 className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold"
