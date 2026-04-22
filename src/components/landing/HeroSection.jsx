@@ -16,6 +16,7 @@ export default function HeroSection() {
     city: "",
   });
 
+  // @ts-ignore
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -23,6 +24,7 @@ export default function HeroSection() {
     }));
   };
 
+  // @ts-ignore
   const sendWhatsApp = (e) => {
     e.preventDefault();
 

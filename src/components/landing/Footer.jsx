@@ -15,7 +15,8 @@ const footerLinks = {
     { label: "About NGK", href: "#about" },
     { label: "Partner With Us", href: "mailto:ngkderma@gmail.com" },
     { label: "Careers", href: "#" },
-    { label: "Privacy Policy", href: "#" },
+    { label: "Privacy Policy", href: "#privacypolicy" },
+    { label: "Data Deletion", href: "#datadeletion" },
   ],
 };
 

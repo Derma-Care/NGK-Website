@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -8,10 +9,12 @@ const LOGO_URL =
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-    { label: "Users & Clinics", href: "#platform" },
+  { label: "Users & Clinics", href: "#platform" },
   { label: "Clinics", href: "#clinics" },
-
+  { label: "Privacy Policy", href: "#privacypolicy" },
+  { label: "Data Deletion", href: "#datadeletion" },
   { label: "Contact", href: "#contact" },
+
 ];
 
 export default function Navbar() {
@@ -38,12 +41,14 @@ export default function Navbar() {
     setShowForm(true);
   };
 
+  // @ts-ignore
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
+  // @ts-ignore
   const formatTimeTo12Hour = (time) => {
     const [hour, minute] = time.split(":");
     let h = parseInt(hour);
@@ -52,6 +57,7 @@ export default function Navbar() {
     h = h ? h : 12;
     return `${h}:${minute} ${ampm}`;
   };
+  // @ts-ignore
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -116,8 +122,8 @@ Thank you 😊
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-            ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100"
-            : "bg-transparent"
+          ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100"
+          : "bg-transparent"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -180,7 +186,7 @@ Thank you 😊
             >
               <div className="relative flex items-center mb-4">
                 <h2 className="text-xl font-bold  text-center w-full">
-                 Book a Free Clinic Demo
+                  Book a Free Clinic Demo
                 </h2>
 
                 <button
@@ -232,35 +238,35 @@ Thank you 😊
                   required
                 />
 
-                  <input
-                type="text"
-                name="date"
-                placeholder="Preferred Date for Demo"
-                onFocus={(e) => {
-                  e.target.type = "date";
-                  e.target.min = new Date().toISOString().split("T")[0];
-                }}
-                onBlur={(e) => {
-                  if (!e.target.value) e.target.type = "text";
-                }}
-                value={formData.date}
-                onChange={handleChange}
-                className="w-full border p-3 rounded-lg"
-                required
-              />
-              <input
-                type="text"
-                name="time"
-                placeholder="Preferred Time for Demo"
-                onFocus={(e) => (e.target.type = "time")}
-                onBlur={(e) => {
-                  if (!e.target.value) e.target.type = "text";
-                }}
-                value={formData.time}
-                onChange={handleChange}
-                className="w-full border p-3 rounded-lg"
-                required
-              />
+                <input
+                  type="text"
+                  name="date"
+                  placeholder="Preferred Date for Demo"
+                  onFocus={(e) => {
+                    e.target.type = "date";
+                    e.target.min = new Date().toISOString().split("T")[0];
+                  }}
+                  onBlur={(e) => {
+                    if (!e.target.value) e.target.type = "text";
+                  }}
+                  value={formData.date}
+                  onChange={handleChange}
+                  className="w-full border p-3 rounded-lg"
+                  required
+                />
+                <input
+                  type="text"
+                  name="time"
+                  placeholder="Preferred Time for Demo"
+                  onFocus={(e) => (e.target.type = "time")}
+                  onBlur={(e) => {
+                    if (!e.target.value) e.target.type = "text";
+                  }}
+                  value={formData.time}
+                  onChange={handleChange}
+                  className="w-full border p-3 rounded-lg"
+                  required
+                />
 
                 <button
                   type="submit"

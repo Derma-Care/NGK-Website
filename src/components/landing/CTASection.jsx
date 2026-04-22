@@ -1,4 +1,6 @@
+// @ts-ignore
 import React, { useState } from "react";
+// @ts-ignore
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Smartphone, Building2, X } from "lucide-react";
 
@@ -15,9 +17,11 @@ export default function CTASection() {
     city: ""
   });
 
+  // @ts-ignore
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  // @ts-ignore
   const formatTimeTo12Hour = (time) => {
     const [hour, minute] = time.split(":");
     let h = parseInt(hour);
@@ -26,6 +30,7 @@ export default function CTASection() {
     h = h ? h : 12;
     return `${h}:${minute} ${ampm}`;
   };
+  // @ts-ignore
   const sendWhatsApp = (e) => {
     e.preventDefault();
     const formattedTime = formatTimeTo12Hour(formData.time);

@@ -10,7 +10,8 @@ import InstagramSection from "@/components/landing/InstagramSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
 import WhatsAppButton from "@/components/landing/WhatsAppButton";
-
+import PrivacyPolicy from "@/components/landing/Privacypolicy";
+import DataDeletion from "@/components/landing/DataDeletion";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -21,8 +22,11 @@ export default function Home() {
       <PlatformSection />
       <ServicesSection />
       <TestimonialsSection />
+
       <InstagramSection />
       <CTASection />
+      <PrivacyPolicy/>
+      <DataDeletion />
       <Footer />
       <WhatsAppButton />
     </div>
