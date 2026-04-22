@@ -167,9 +167,17 @@ export default function PrivacyPolicy() {
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#be123c", display: "inline-block" }} />
               <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#be123c" }}>Legal &amp; Privacy</span>
             </div>
-            <h1 className="pp-serif" style={{ fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 700, color: "#1a0a0e", lineHeight: 1.1, marginBottom: 18 }}>
-              Privacy<br />
-              <em className="pp-shine" style={{ fontStyle: "italic" }}>Policy.</em>
+            <h1 className="dd-serif"
+                            style={{
+                                fontSize: "clamp(24px, 4vw, 40px)", // decreased from (32px, 6vw, 52px)
+                                fontWeight: 600,
+                                color: "#1a0a0f",
+                                lineHeight: 1.1,
+                                letterSpacing: "-0.01em",
+                                marginBottom: 18,
+                            }}>
+              Privacy Policy<br />
+              
             </h1>
             <p style={{ fontSize: 14, color: "#7a5060", lineHeight: 1.75, maxWidth: 420, margin: "0 auto 24px" }}>
               NGK – <strong style={{ color: "#1a0a0e" }}>Neeha's Glow Kart</strong>, operated by <strong style={{ color: "#1a0a0e" }}>UDIT Cosmetech Private Limited</strong>, is committed to protecting your personal information.
@@ -219,22 +227,11 @@ export default function PrivacyPolicy() {
             <InfoGrid items={[
               { label: "Brand", value: "NGK – Neeha's Glow Kart" },
               { label: "Company", value: "UDIT Cosmetech Private Limited" },
-              { label: "Privacy Email", value: "privacy@uditcosmetech.com", href: "mailto:privacy@uditcosmetech.com" },
+              { label: "Privacy Email", value: "support@uditcosmetech.com", href: "mailto:support@uditcosmetech.com" },
               { label: "Support Email", value: "support@uditcosmetech.com", href: "mailto:support@uditcosmetech.com" },
               { label: "Website", value: "ngkderma.uditcosmetech.com", href: "https://ngkderma.uditcosmetech.com/", span: 2 },
             ]} />
           </Block>
-
-          {/* ── Footer ── */}
-          <Reveal delay={0.2} style={{ textAlign: "center", marginTop: 48, paddingTop: 32, borderTop: "1px solid rgba(190,18,60,0.1)" }}>
-            <p className="pp-serif" style={{ fontSize: 20, fontWeight: 600, fontStyle: "italic", color: "#be123c", marginBottom: 6 }}>
-              NGK – Neeha's Glow Kart
-            </p>
-            <p style={{ fontSize: 11, color: "#c09aaa", letterSpacing: "0.04em" }}>
-              © 2026 UDIT Cosmetech Private Limited. All rights reserved.
-            </p>
-          </Reveal>
-
         </div>
       </section>
     </>
